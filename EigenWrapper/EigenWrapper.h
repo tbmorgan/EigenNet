@@ -2,11 +2,12 @@
 
 #pragma once
 #include <Eigen/Dense>
+#include <Eigen/Core>
 
 using namespace System;
 
-namespace EigenWrapper {
-
+namespace EigenWrapper
+{
 	public ref class MatrixXd
 	{
 		// TODO: Add your methods for this class here.
@@ -22,5 +23,12 @@ namespace EigenWrapper {
 	internal:
 		Eigen::MatrixXd* matrix;
 		MatrixXd(Eigen::MatrixXd* matrix);
+	};
+
+	public ref class MatrixMath
+	{
+	public:
+		//static double* MultipleMatrices(double* A, double* B,  int width, int height);
+		static array<double, 2>^ MultiplyMatrices(array<double, 2>^ A, array<double, 2>^ B);
 	};
 }
