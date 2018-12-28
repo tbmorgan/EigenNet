@@ -3,6 +3,7 @@
 #pragma once
 #include <Eigen/Dense>
 #include <Eigen/Core>
+#include <memory>
 
 using namespace System;
 
@@ -21,7 +22,7 @@ namespace EigenWrapper
 			return gcnew MatrixXd(&tempMat);
 		}
 	internal:
-		Eigen::MatrixXd* matrix;
+	 	Eigen::MatrixXd* matrix;
 		MatrixXd(Eigen::MatrixXd* matrix);
 	};
 

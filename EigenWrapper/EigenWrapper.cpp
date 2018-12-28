@@ -24,6 +24,7 @@ EigenWrapper::MatrixXd::~MatrixXd()
 EigenWrapper::MatrixXd::!MatrixXd()
 {
 	//Apparently, the Eigen matrix doesn't need to be manually destroyed?
+	//delete &matrix;
 }
 
 //double* MatrixMath::MultipleMatrices(double* A, double* B, int width, int height)
