@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using EigenWrapper;
+using EigenWrapper_CppCLI;
 using System.Diagnostics;
 
 namespace WrapperTest
@@ -15,9 +15,9 @@ namespace WrapperTest
         static void Main(string[] args)
         {
             Console.WriteLine("Running Eigen wrapper test:");
-            EigenWrapper.MatrixXd matrixA = new EigenWrapper.MatrixXd(size, size);
-            EigenWrapper.MatrixXd matrixB = new EigenWrapper.MatrixXd(size, size);
-            EigenWrapper.MatrixXd matrixC;
+            EigenWrapper_CppCLI.MatrixXd matrixA = new EigenWrapper_CppCLI.MatrixXd(size, size);
+            EigenWrapper_CppCLI.MatrixXd matrixB = new EigenWrapper_CppCLI.MatrixXd(size, size);
+            EigenWrapper_CppCLI.MatrixXd matrixC;
             Stopwatch watch = Stopwatch.StartNew();
             for (int i = 0; i < testIterations; i++)
             {

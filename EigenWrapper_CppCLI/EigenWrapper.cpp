@@ -2,26 +2,26 @@
 #include "Stdafx.h"
 #include "EigenWrapper.h"
 
-using namespace EigenWrapper;
+using namespace EigenWrapper_CppCLI;
 using Eigen::MatrixXd;
 
-EigenWrapper::MatrixXd::MatrixXd(int x, int y)
+EigenWrapper_CppCLI::MatrixXd::MatrixXd(int x, int y)
 {
 	matrix = new Eigen::MatrixXd(x, y);
 	*matrix = Eigen::MatrixXd::Random(x, y);
 }
 
-EigenWrapper::MatrixXd::MatrixXd(Eigen::MatrixXd* mat)
+EigenWrapper_CppCLI::MatrixXd::MatrixXd(Eigen::MatrixXd* mat)
 {
 	matrix = mat;
 }
 
-EigenWrapper::MatrixXd::~MatrixXd()
+EigenWrapper_CppCLI::MatrixXd::~MatrixXd()
 {
 	this->!MatrixXd();
 }
 
-EigenWrapper::MatrixXd::!MatrixXd()
+EigenWrapper_CppCLI::MatrixXd::!MatrixXd()
 {
 	//Apparently, the Eigen matrix doesn't need to be manually destroyed?
 	//delete &matrix;

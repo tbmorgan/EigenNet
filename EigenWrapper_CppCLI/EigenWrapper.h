@@ -7,7 +7,7 @@
 
 using namespace System;
 
-namespace EigenWrapper
+namespace EigenWrapper_CppCLI
 {
 	public ref class MatrixXd
 	{

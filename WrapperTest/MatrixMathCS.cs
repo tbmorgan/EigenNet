@@ -447,5 +447,75 @@ namespace WrapperTest
 
             return result;
         }
+
+        internal static double[,] SubtractMatrices(double[,] A, double[,] B)
+        {
+            if (A.GetLength(0) != B.GetLength(0) || A.GetLength(1) != B.GetLength(1))
+            {
+                throw new ArgumentException("Both matrices must be of the same size.");
+            }
+
+            int height = A.GetLength(0);
+            int width = A.GetLength(1);
+            double[,] result = new double[height, width];
+
+            for (int i = 0; i < height; i++)
+            {
+                for (int j = 0; j < width; j++)
+                {
+                    result[i, j] = A[i, j] - B[i, j];
+                }
+            }
+
+            return result;
+        }
+
+        internal static double[,] Transpose(double[,] A)
+        {
+            double[,] B = new double[A.GetLength(1), A.GetLength(0)];
+
+            for (int i = 0; i < A.GetLength(0); i++)
+            {
+                for (int j = 0; j < A.GetLength(1); j++)
+                {
+                    B[j, i] = A[i, j];
+                }
+            }
+
+            return B;
+        }
+
+        internal static double[] CrossProduct(double[] A, double[] B)
+        {
+            if (A.Length == B.Length && B.Length == 3)
+            {
+                double[] C = new double[3];
+                C[0] = A[1] * B[2] - A[2] * B[1];
+                C[1] = A[2] * B[0] - A[0] * B[2];
+                C[2] = A[0] * B[1] - A[1] * B[0];
+                return C;
+            }
+            else
+            {
+                throw new IndexOutOfRangeException("Both vectors must have length 3 to compute a cross product.");
+            }
+        }
+
+        internal static double MatrixNorm(double[,] A)
+        {
+            double normSqrd = 0;
+            int height = A.GetLength(0);
+            int width = A.GetLength(1);
+
+            for (int i = 0; i < height; i++)
+            {
+                for (int j = 0; j < width; j++)
+                {
+                    normSqrd += Math.Pow(Math.Abs(A[i, j]), 2);
+                }
+            }
+
+            return Math.Sqrt(normSqrd);
+        }
     }
 }
