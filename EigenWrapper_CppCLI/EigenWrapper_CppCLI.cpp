@@ -1,6 +1,6 @@
 // This is the main DLL file.
 #include "Stdafx.h"
-#include "EigenWrapper.h"
+#include "EigenWrapper_CppCLI.h"
 
 using namespace EigenWrapper_CppCLI;
 using Eigen::MatrixXd;

@@ -11,12 +11,12 @@ using namespace System::Security::Permissions;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 //
-[assembly:AssemblyTitleAttribute("EigenWrapper")];
+[assembly:AssemblyTitleAttribute("EigenWrapper_CppCLI")];
 [assembly:AssemblyDescriptionAttribute("")];
 [assembly:AssemblyConfigurationAttribute("")];
-[assembly:AssemblyCompanyAttribute("Microsoft")];
-[assembly:AssemblyProductAttribute("EigenWrapper")];
-[assembly:AssemblyCopyrightAttribute("Copyright (c) Microsoft 2013")];
+[assembly:AssemblyCompanyAttribute("")];
+[assembly:AssemblyProductAttribute("EigenWrapper_CppCLI")];
+[assembly:AssemblyCopyrightAttribute("")];
 [assembly:AssemblyTrademarkAttribute("")];
 [assembly:AssemblyCultureAttribute("")];
 
