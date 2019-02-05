@@ -63,12 +63,19 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\EigenWrapper\EigenWrapper.csproj">
+      <Project>{6e2a0c5a-3662-4635-b8a1-985f8a39f5f5}</Project>
+      <Name>EigenWrapper</Name>
+    </ProjectReference>
     <ProjectReference Include="..\EigenWrapper_CppCLI\EigenWrapper_CppCLI.vcxproj">
       <Project>{16fb4cfe-67c4-44fb-8db0-c90997cdf1cf}</Project>
       <Name>EigenWrapper_CppCLI</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(SolutionDir)EigenWrapper\$(OutDir)NativeEigenWrapper.*" "$(TargetDir)" /Y</PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

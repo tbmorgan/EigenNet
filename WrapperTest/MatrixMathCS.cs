@@ -39,7 +39,6 @@ namespace WrapperTest
             return result;
         }
 
-        
         internal static double[,] MultiplyMatrices(double[,] A, double[,] B)
         {
             int aHeight = A.GetLength(0);
@@ -516,6 +515,23 @@ namespace WrapperTest
             }
 
             return Math.Sqrt(normSqrd);
+        }
+
+        internal static double[,] DivideMatrixbyScalar(double[,] A, double b)
+        {
+            int height = A.GetLength(0);
+            int width = A.GetLength(1);
+            double[,] result = new double[height, width];
+
+            for (int i = 0; i < height; i++)
+            {
+                for (int j = 0; j < width; j++)
+                {
+                    result[i, j] = A[i, j] / b;
+                }
+            }
+
+            return result;
         }
     }
 }

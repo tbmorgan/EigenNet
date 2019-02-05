@@ -70,25 +70,25 @@
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>D:\User Folders\Downloads\Eigen 3.2.0;$(IncludePath)</IncludePath>
     <IntDir>obj\$(PlatformTarget)\$(Configuration)\</IntDir>
-    <OutDir>$(SolutionDir)EigenWrapper\bin\$(PlatformShortName)\$(Configuration)\</OutDir>
+    <OutDir>bin\$(PlatformShortName)\$(Configuration)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>D:\User Folders\Downloads\Eigen 3.2.0;$(IncludePath)</IncludePath>
     <IntDir>obj\$(PlatformTarget)\$(Configuration)\</IntDir>
-    <OutDir>$(SolutionDir)EigenWrapper\bin\$(PlatformShortName)\$(Configuration)\</OutDir>
+    <OutDir>bin\$(PlatformShortName)\$(Configuration)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>D:\User Folders\Downloads\Eigen 3.2.0;$(IncludePath)</IncludePath>
     <IntDir>obj\$(PlatformTarget)\$(Configuration)\</IntDir>
-    <OutDir>$(SolutionDir)EigenWrapper\bin\$(PlatformShortName)\$(Configuration)\</OutDir>
+    <OutDir>bin\$(PlatformShortName)\$(Configuration)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>D:\User Folders\Downloads\Eigen 3.2.0;$(IncludePath)</IncludePath>
     <IntDir>obj\$(PlatformTarget)\$(Configuration)\</IntDir>
-    <OutDir>$(SolutionDir)EigenWrapper\bin\$(PlatformShortName)\$(Configuration)\</OutDir>
+    <OutDir>bin\$(PlatformShortName)\$(Configuration)\</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
